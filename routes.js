@@ -13,6 +13,7 @@ router.get("/books", async (req, res) => {
   }
 });
 
+//POST /books/new
 router.post("/books/new", async (req, res) => {
   try {
     const { title, author, genre } = req.body;
@@ -28,6 +29,7 @@ router.post("/books/new", async (req, res) => {
   }
 });
 
+//PUT /books/:id
 router.put("/books/:id", async (req, res) => {
   const { id } = req.params;
 
@@ -53,6 +55,7 @@ router.put("/books/:id", async (req, res) => {
   }
 });
 
+//DELETE /books/:id
 router.delete("/books/:id", async (req, res) => {
   const { id } = req.params;
 
